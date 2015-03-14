@@ -5,6 +5,7 @@ import Control.Monad
 import Foreign.C.Types (CFloat(..))
 import Sound.PortAudio 
 import Sound.Sarasvati.Types
+import Sound.Sarasvati.Common.Stereo
 import Foreign.Ptr (Ptr)
 import Foreign.Storable (pokeElemOff)
 
@@ -31,9 +32,6 @@ runSarasvatiOutput conf lst = do
         if st == Finished 
           then stopStream strm >> return (Right ())
           else streaming stat strm
-
-float2Cfloat :: (Float, Float) -> (CFloat, CFloat)
-float2Cfloat (x, y) = (CFloat x, CFloat y)
 
 ----------------
 -- callback function
