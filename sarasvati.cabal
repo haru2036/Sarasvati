@@ -19,7 +19,8 @@ library
   exposed-modules:     
     Sound.Sarasvati, 
     Sound.Sarasvati.Types,
-    Sound.Sarasvati.List.Stereo
+    Sound.Sarasvati.List.Stereo,
+    Sound.Sarasvati.Common.Stereo
   -- other-modules:       
   build-depends:       
     base ==4.6.*, 
